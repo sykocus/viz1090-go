@@ -90,9 +90,11 @@ int main(int argc, char **argv) {
         } else if (!strcmp(argv[j],"--lat") && more) {
             appData.modes.fUserLat = atof(argv[++j]);
             view.centerLat = appData.modes.fUserLat;
+            view.originalLat = view.centerLat;  // Save starting point latitude
         } else if (!strcmp(argv[j],"--lon") && more) {
             appData.modes.fUserLon = atof(argv[++j]);
             view.centerLon = appData.modes.fUserLon;
+            view.originalLon = view.centerLon;  // Save starting point longitude
         } else if (!strcmp(argv[j],"--metric")) {
             view.metric = 1;
         } else if (!strcmp(argv[j],"--fps")) {
