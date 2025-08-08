@@ -146,6 +146,10 @@ class View {
 	    int mapRedraw;
 	    int mapAnimating;
 
+		// Original starting point
+		double originalLat;
+		double originalLon;
+
 	    float currentLon;
 	    float currentLat;
 	    std::chrono::high_resolution_clock::time_point lastFrameTime;
